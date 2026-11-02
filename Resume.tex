@@ -1,0 +1,139 @@
+%%% Resume.tex -- Michael Merickel
+%%%
+%%% Content only. The template, and the reasoning behind every constraint it
+%%% enforces, lives in resume.cls.
+%%%
+%%%   make        build Resume.pdf
+%%%   make lint   source checks, no build needed
+%%%   make check  build, then validate the PDF's text layer
+
+\documentclass{resume}
+
+\hypersetup{
+  pdftitle={Michael Merickel - Resume},
+  pdfauthor={Michael Merickel},
+  pdfsubject={Resume},
+  pdfkeywords={Staff Software Engineer, Principal Software Engineer, Software Architect, enterprise architecture, solution architecture, technical leadership, Python, Pyramid, Pylons Project, SQLAlchemy, PostgreSQL, Snowflake, data platform, AWS, EKS, RDS, CloudWatch, Azure, Kubernetes, ArgoCD, Terraform, Ansible, GitLab CI/CD, GitHub Actions, Docker, Prometheus, VictoriaMetrics, Sentry, React Native, iOS, Android, GraphQL, OAuth, OIDC, SSO, Okta, RBAC, multi-tenant, multi-region, HIPAA, GDPR, GxP, SOC 2, ISO 27001, FDA-regulated software, clinical trials, digital health, open source, Claude Code}
+}
+
+\begin{document}
+
+\resumeHeader{Michael Merickel}{%
+  Boise, ID\resumeSep
+  \mbox{+1 319-331-3282}\resumeSep
+  \href{mailto:michael@merickel.org}{michael@merickel.org}\resumeSep
+  Signal: MichaelMerickel.42\\[2pt]
+  \href{https://michael.merickel.org}{michael.merickel.org}\resumeSep
+  \href{https://github.com/mmerickel}{github.com/mmerickel}%
+}
+
+\resumeSection{Summary}
+Principal software engineer and long-time open source maintainer with 15+ years architecting regulated digital health platforms, from first line of code to multi-region production.
+Original developer and lead architect of BrainBaseline, used in 100+ research studies and 20+ clinical trials, including Pfizer's first-of-its-kind fully virtual AcRIS study of 9,000+ participants.
+Founding member of an enterprise architecture team setting technical direction across 4 engineering teams and IT.
+Works across mobile, Python backends, data and AWS infrastructure.
+Core maintainer of the Pylons Project since 2014, including Pyramid, waitress and WebOb, each with millions of monthly downloads.
+
+\resumeSection{Skills}
+\resumeLead{Languages} Python, Objective-C, JavaScript, SQL, Bash, C, C++
+\resumeLead{Backend and Mobile} Pyramid, SQLAlchemy, GraphQL, React, React Native, iOS, Android
+\resumeLead{Data} PostgreSQL, Snowflake, S3, AWS QuickSight, ELT
+\resumeLead{Cloud and DevOps} AWS (EKS, RDS, IAM Identity Center, Control Tower, CloudWatch), Azure, Kubernetes, ArgoCD, Terraform, Ansible, GitLab CI/CD, GitHub Actions, Docker, Podman, Linux, Prometheus, VictoriaMetrics, Sentry
+\resumeLead{Identity, Devices and Compliance} OAuth 2.0, OIDC, SSO, Okta, Mosyle, MDM, Apple Business Manager, RBAC, HIPAA, GDPR, GxP, SOC 2, ISO 27001, FDA-regulated software
+
+\resumeSection{Experience}
+
+\resumeEntry{Career Break}
+            {Personal time and independent learning}
+            {Boise, ID}
+            {August 2025 - Present}
+\begin{resumeItems}
+\item Released Pyramid 2.1 and rebuilt home infrastructure and automations using Claude Code and local AI
+\end{resumeItems}
+
+\resumeEntry{Principal Software Engineer}
+            {Clinical ink (acquired Digital Artefacts, November 2021)}
+            {Remote}
+            {November 2021 - August 2025}
+\begin{resumeItems}
+\item \textbf{Technical leadership:} Continued as technical lead for BrainBaseline post-acquisition, designing solution architecture, leading code reviews, and interfacing with other teams and C-suite leadership
+\item \textbf{Enterprise architecture:} Founding team member, coordinating technical direction across 4 engineering teams and IT.
+Proposed and shipped a major refactoring elevating enterprise data model management including identity / customers into a new core system
+\item \textbf{Clinical trials:} Helped design protocols for 20+ clinical trials, and was lead engineer designing the data models and protocols for Accu-Chek glucose meters and Dexcom continuous glucose monitor (CGM) devices
+\item \textbf{Data platform:} Migrated the data platform to Clinical ink's Snowflake account and significantly expanded its capabilities to support 20+ clinical trials
+\item \textbf{Identity:} Built BrainBaseline's IdP to support federating to upstream OIDC and OAuth 2.0 integrations, critical to integrating with other products and customers' systems, for authenticating researchers, clinicians and participants
+\item \textbf{Audits and integration:} Primary technical contact during third-party clinical trial audits.
+Worked directly with corporate IT on post-acquisition integration, device management, bridging AWS networks, decommissioning on-site systems, migrating data and moving from Okta and Google Workspace to Azure, Office 365 and Box
+\item \textbf{Engineering culture:} Led a weekly 1-hour dev chat with Q\&A, live coding, demos and engineers sharing their work
+\end{resumeItems}
+
+\resumeEntry{Senior Software Engineer and Architect}
+            {Digital Artefacts LLC}
+            {Iowa City, IA}
+            {June 2010 - November 2021}
+\begin{resumeItems}
+\item \textbf{Leadership:} Longest tenured engineer and lead architect, training and guiding the team as it grew from 1 to about 20 engineers and 25+ employees; primary technical contact during due diligence for the 2021 acquisition
+\item \textbf{BrainBaseline:} Original developer and lead architect of a digital assessment platform used in 100+ research studies and 10+ clinical trials, with 50+ survey, cognitive, voice and motion tasks, including on Apple Watch, validated in clinical research, 14 of them normed and published.
+Built the native Objective-C iPad app, later ported to iPhone and then cross-platform React Native, and was sole backend developer until 2019 (PostgreSQL, Python, Pyramid, React)
+\item \textbf{Virtual clinical study:} Worked on all aspects of Pfizer's AcRIS, a first-of-its-kind fully virtual COVID-19, flu and RSV study from 2020, covering recruitment, identity verification, remote informed consent, and daily voice and symptom capture for 9,000+ participants across all 50 states.
+Primary technical contact for Pfizer across protocol design, debugging and data delivery.
+Wrote a whitepaper showing mobile phone microphones were sufficient for voice capture.
+Built real-time audio analysis pipelines to maintain data quality
+\item \textbf{Protocol builder:} Designed and built a web tool for researchers to author clinical trial protocols, synced to a shell iPad app that ran them 100\% offline in lab settings
+\item \textbf{Data platform:} Architected and helped build a multi-region Snowflake integration and AWS QuickSight visualizations that became integral to data warehousing and delivery to customers' third-party systems, with protocol adherence analysis and voice and motion data quality algorithms on a containerized EKS analysis pipeline.
+Delivered structured audio, motion and performance data to researchers via APIs and SFTP
+\item \textbf{DriveELD (2017 - 2019):} Lead architect and developer of an FMCSA-compliant electronic logging device for trucking, later acquired: a React Native iOS and Android app with real-time vehicle telemetry, navigation, workflow management and dispatch chat, on a PostgreSQL and Pyramid backend with GraphQL APIs and RBAC.
+Designed the data models and sync protocols that let drivers manage hours of service compliance 100\% offline
+\item \textbf{Cloud platform:} Acted as the DevOps team throughout.
+Migrated the backend initially from Rackspace dedicated hosting to AWS in 2013, automating deployment with Ansible.
+From 2019, moved to EKS with Terraform and built a multi-region platform (US, Europe, UK) on GitLab CI/CD, ArgoCD and RDS, monitored with CloudWatch, extending it at Clinical ink through 2025, deploying per-tenant backends to meet data locality and security needs.
+Compliant with HIPAA, GDPR, GxP, SOC 2 and ISO 27001, passing third-party audits required by customers
+\item \textbf{Corporate IT:} Led a two-person IT team.
+In 2020, built remote work infrastructure on Okta, Google Workspace, Office 365 and AWS IAM Identity Center with SSO across 20+ systems, and designed a 20+ account AWS Organization with directory-controlled access, no static IAM credentials and shared VPCs.
+Implemented device management (MDM) with Mosyle for all corporate devices as well as participant devices as part of clinical trials
+\end{resumeItems}
+
+\resumeEntry{Software Engineer}
+            {Componica LLC}
+            {Iowa City, IA}
+            {December 2008 - May 2010}
+\begin{resumeItems}
+\item Built the MemorizeWords iPhone language learning app, and image segmentation and classification algorithms including handwritten OCR and oil tank volume estimation for energy trading
+\end{resumeItems}
+
+\resumeEntry{Software Engineer}
+            {VIDA Diagnostics Inc.}
+            {Iowa City, IA}
+            {August 2007 - November 2008}
+\begin{resumeItems}
+\item Automated continuous regression testing of 3D image segmentation algorithms in support of FDA 510(k) clearance, and instituted bug tracking and nightly builds in a regulated, audited environment
+\end{resumeItems}
+
+\resumeSection{Projects}
+\begin{resumeItems}
+\item Core maintainer of the \href{https://pylonsproject.org}{Pylons Project} since 2014 (contributor since 2011), including \href{https://github.com/Pylons/pyramid}{Pyramid}, a Python web framework with 4,000+ GitHub stars and 2M+ monthly PyPI downloads: third most active committer ever with 1,600+ commits, still active in 2026.
+Emphasis on API design, documentation and 100\% unit test coverage
+\item Maintainer of \href{https://github.com/Pylons/waitress}{waitress} (6M+ monthly PyPI downloads) and \href{https://github.com/Pylons/webob}{WebOb} (4M+)
+\item Author of \href{https://github.com/Pylons/hupper}{hupper}, \href{https://github.com/Pylons/plaster}{plaster}, \href{https://github.com/mmerickel/wired}{wired}, \href{https://github.com/mmerickel/pyramid_services}{pyramid\_services}, \href{https://github.com/mmerickel/psycopg2_mq}{psycopg2\_mq} (PostgreSQL-backed message queue), \href{https://github.com/mmerickel/oidc-token-proxy}{oidc-token-proxy} (OIDC token exchange between private and public issuers)
+\end{resumeItems}
+
+\resumeSection{Education}
+\resumeEntry{M.S., Electrical and Computer Engineering (Medical Image Analysis)}
+            {The University of Iowa}
+            {Iowa City, IA}
+            {December 2007}
+\resumeEntry{B.S.E., Electrical and Computer Engineering; minors in Computer Science, Mathematics}
+            {The University of Iowa}
+            {Iowa City, IA}
+            {May 2006}
+
+\resumeSection{Publications}
+\begin{resumeItems}
+\item Johnson et al., \href{https://doi.org/10.3390/s24175637}{Wearable Sensor-Based Assessments for Remotely Screening Early-Stage Parkinson's Disease}, Sensors, 2024
+\item Lieu et al., \href{https://doi.org/10.36227/techrxiv.172927312.24511423/v1}{Technical Validation of a Novel GCP-Compliant Platform for Real-Time CGM Capture in FDA-Regulated Clinical Trials}, TechRxiv preprint, 2024; also presented in Diabetes, Vol. 73, 2024
+\item Adams et al. (WATCH-PD Study Collaborator), \href{https://doi.org/10.1038/s41531-023-00497-x}{Using a smartwatch and smartphone to assess early Parkinson's disease in the WATCH-PD study}, npj Parkinson's Disease, 2023
+\item Rubin et al., \href{https://doi.org/10.2196/25660}{Tablet-Based Cognitive Impairment Screening for Adults With HIV Seeking Clinical Care: Observational Study}, JMIR Mental Health, 2021
+\item Earlier: Journal of Graph Algorithms and Applications, 2007; Proc. of SPIE Medical Imaging, 2006 and 2007
+\end{resumeItems}
+
+\end{document}
